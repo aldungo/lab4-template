@@ -1,22 +1,20 @@
 /**
  * Name: [Enter Your Name Here]
  * Date: [Enter Today's Date]
-* Purpose: InClass 3 - 
-* [Write a description about this InClass 3 program]
+* Purpose: InClass 4 - 
+* [Write a description about this InClass 4 program]
  */
 
 // Don't forget to import and declare a Scanner for user input.
 
-public class InClass3_FirstName_LastName
+public class InClass4_FirstName_LastName
 {
     public static void main(String[] args) 
     {
-        // In-Class 3 Example:
-        // Step 1: Prompt the user to enter the length of the side of a cube.
+        // In-Class 4 Example:
+        // Step 1: Prompt the user to enter the current temperature outside.
         // Step 2: Read the user's input and store it in a variable.
-        // Step 3: Use an appropriate method to determine the volume of the cube.
-        // Step 4: Use an appropriate method to determine the surface area of the cube.
-        // HINT: Steps 3 and 4 will use the Math.pow(a, b) method
-        // Step 5: Print the volume and surface area in clear sentences.
+        // Step 3: Use logic to compare the entered temperature to the specified thresholds.
+        // Step 4: Display a message based on the result of your comparison.
     }
 }
