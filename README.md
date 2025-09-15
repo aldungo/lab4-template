@@ -1,111 +1,73 @@
-# Programming Fundamentals CSCI 1436
-## Programming Fundamentals I
+# Lab 4: Meal Cost Calculator with Tip and Tax
 
-Lab Assignment #3
+*Lab is always due the *eve* before the next one. If you attend lab on Tuesday, this is due on Monday. For Wednesday lab, it is due Tuesday.*
+## Purpose
 
-Due date: The evening BEFORE next lab, at 11:59 pm
+The owner of a restaurant wants to calculate the total cost of meals given different amounts the customer might tip. This program will emphasize the following concepts:
 
-## Lab Assignment Instructions
-
-### Task Overview
-For this lab only, the Java file is already created for you, named `InClass3_FirstName_LastName.java`. Replace FirstName and LastName with your actual name, and do the same in the class header on Line 10. **Note:** In future labs, you will be responsible for creating the `.java` file yourself, including writing the correct class and method headers. This is an important skill for building your own programs from scratch.
-
-**Example:** If your name is John Smith, create `InClass3_John_Smith.java`
-
-## In-Class/Lab 3 Instructions
-
-### Purpose
-A real estate agent wants to track the value of homes over a period of time. Tracking these values will require calculating the compound interest of the initial value of those homes. This program will emphasize the following concepts:
-
-- Using numeric data types and operations
-- Using the Math class’s pow method
+- Using cast operators to round to two decimal places
+- Using if statements to select one of many options
 
 ---
 
-### In-Class 3: Math.pow() Example
-A major component of this program is the use of the pow method in calculating compound interest. To better understand how exponentiation works in Java, let’s consider another program that relies on this method. This program will request the length of the side of a cube as user input and calculate both the volume and surface area of that cube.
+## In-Class 4: Outfit Selector Based on Weather
 
-**Note:** In programming, the carat symbol (`^`) is often used in math as a shorthand for "to the power of" (for example, `side^3` means "side cubed" when reading). However, in Java, the `^` operator does NOT perform exponentiation—it is actually the bitwise XOR operator. To calculate powers, you must use `Math.pow`. For example, `Math.pow(side, 3)` calculates the cube of the side, and `Math.pow(side, 2)` calculates the square.
+To prepare for writing this software, let’s consider another case that will require conditional executions. The user wants to decide on outfits based on the weather. Make a request for the user to input a temperature and then check for the following conditions:
 
-This cube example will help you practice using `Math.pow` before applying it to compound interest calculations.
+- If the temperature is greater than 70, the user should wear something light.
+- If the temperature is greater than 60, the user should wear pants and a long sleeve shirt.
+- If the temperature is less than or equal to 60, the user should take a coat.
 
+Example outputs:
+`
+`
+- It’s pretty warm outside. You should wear something light.
+- It’s starting to get colder. Perhaps you should wear pants and a long sleeve shirt.
+- It’s pretty cold outside. Make sure you take your coat.
 
-**Instructions:**
-For the In-Class activity, write a short Java program that uses `Math.pow(a, b)` to calculate values based on user input. Focus on practicing how to use this method for different calculations.
+---
 
-**Example program flow:**
+## Task
 
-```
-Please enter the length of the side of the cube: 5
-The volume of the cube is 125
+Create a new Java project or repl titled either `Tipping_FirstName_LastName` or `Lab4_FirstName_LastName`. You must include comments describing key parts of this program.
+
+### Steps
+
+1. Make sure the initial code of your application is prepared to write statements in the main method.
+2. Declare a Scanner that accepts input from the keyboard.
+3. Declare the following two variables and one constant:
+   - A variable of type `double` that will hold the cost of the meal
+   - A variable of type `int` that will hold the user’s selection for the amount to tip
+   - A constant of type `double` that will hold a sales tax of 8.25% (as a decimal)
+4. Include a prompt to the user to input the initial cost of the meal (before sales tax or tip). Use the appropriate method of the Scanner class to assign the user’s input to the appropriate variable.
+5. Calculate the cost of the meal with the sales tax applied and assign the result back to the same variable that holds the cost of the meal. (There are two ways to calculate sales tax. Both methods are accepted but one is more concise than the other!)
+6. Include a second prompt to the user to input their choice of how much to tip. Use the appropriate method of the Scanner class to assign the user’s input to the appropriate variable.
+7. Use if statements to check which option the user chose.
+   - If the user chose option 1, apply a 10% tip and assign the result back to the same variable that holds the cost of the meal.
+   - If the user chose option 2, apply a 15% tip and assign the result back to the same variable that holds the cost of the meal.
+   - If the user chose option 3, apply a 20% tip and assign the result back to the same variable that holds the cost of the meal.
+8. Display the final cost to the user rounded to two decimal places. You must use the cast operator and appropriate math operations to round to two decimal places.
+
+#### Example Program Flows
+
+If the user enters 9.99 for the initial cost of the meal and chooses options 1, 2, or 3, respectively, the program should calculate and display the final cost accordingly.
+
+---
+
+## Grading Criteria
+
+- Comments describing this program: **5 points**
+- Importing and declaring the Scanner: **8 points**
+- Each of the two variable declarations: **3 points each (6 points total)**
+- Constant declaration: **4 points**
+- Request for the user’s input for the initial cost of the meal: **5 points**
+- Calculation applying the sales tax: **10 points**
+- Request for the user’s input for the choice of tip: **5 points**
+- Determining the correct amount to tip and performing the correct calculation: **36 points**
+- Output of the final cost rounded to two decimal places: **21 points**
 The surface area of the cube is 150
-```
-
----
-
-### Lab 3: Compound Interest Calculation
-
-**Task:**
-Create a new Java project titled either `CompoundInterest_FirstName_LastName` or `Lab3_FirstName_LastName`. You must include comments describing key parts of this program.
-
-**Requirements:**
-- Prepare your application to write statements in the `main` method.
-- Import and declare a Scanner to accept input from the keyboard.
-- Declare the following four variables:
-   - A variable of type `double` for the initial value of the home
-   - A variable of type `int` for the number of elapsed years
-   - A variable of type `double` for the interest rate
-   - A variable of type `double` for the final value of the home
-- Prompt the user to input the initial value of the home and assign it using Scanner.
-- Prompt the user to input the number of elapsed years and assign it using Scanner.
-- Prompt the user to input the interest rate and assign it using Scanner.
-   - **Hint:** If the double data type uses `nextDouble`, what would the int data type use?
-- Convert the interest rate from a percentage to a decimal (e.g., 6% = 0.06).
-- Calculate the final value of the home using the formula for compound interest:
-
-   `A = P * (1 + r)^t`
-
-   Where:
-   - `P` = initial value
-   - `t` = number of elapsed years
-   - `r` = interest rate (as a decimal)
-   - `A` = final value
-
-   - **Order of operations:** Addition first, then power, then multiplication.
-- Display a message that includes the final value to the user.
-
-**Example program flow:**
-
-```
-Please enter the initial value of the home: 200000
-Please enter the number of elapsed years: 25
-Please enter the interest rate: 6
-The final value of the home is: 858488.46
-```
-
----
-
-### Criteria
-- Comments describing this program (5 points)
-- Importing and declaring the Scanner (10 points)
-- Each of the four variable declarations (12 points total)
-- Each request for the user’s inputs (24 points total)
-- Converting the percentage to a decimal (3 points)
-- Calculation for the final value of the home (30 points)
-- Output of the final value (16 points)
-
----
-
-### Screenshots
-Please upload at least one screenshot of your console output. You can use the example input to show the correct corresponding output, or use your own input.
 
 
-### Troubleshooting Common Issues
-- **Compilation errors:** For this lab, ensure you have `import java.util.Scanner;` at the top, all variables (like initial value, years, interest rate, and final value) are declared, and every statement ends with a semicolon. Check for missing curly braces in your `main` method.
-- **No output or missing prompt:** Make sure you use `System.out.print()` or `System.out.println()` for every user prompt and result. If nothing appears, confirm your code is inside the `main` method and not commented out.
-- **Incorrect calculation:** For the compound interest, use `A = P * Math.pow(1 + r, t)` and convert the interest rate to a decimal (e.g., 6% becomes 0.06). Double-check variable names and order of operations.
-- **Wrong filename/class name:** Your file and class should be named exactly as instructed (e.g., `Lab3_FirstName_LastName.java`), using your real name. The class name inside the file must match the filename.
-- **Typos:** Carefully check for spelling, capitalization, and punctuation errors, especially in variable names and method calls like `Scanner` and `System.out.println`.
 
 ## Commit Your Changes
 ### Step 1. Use VS Code's Source Control panel:
